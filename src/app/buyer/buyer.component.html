@@ -1,0 +1,28 @@
+<div style="text-align: center; font-family: Arial, sans-serif; margin-top: 20px; color: #333;">
+    <h2>Welcome {{s}}</h2>
+  
+    <!-- Initial Buttons -->
+    <div *ngIf="whatToShow == 0" style="margin-top: 20px;">
+      <button 
+        (click)="change(1)" 
+        style="margin: 10px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">
+        Product
+      </button>
+      <button 
+        (click)="change(2)" 
+        style="margin: 10px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">
+        Cart
+      </button>
+    </div>
+  
+    <!-- Product Section -->
+    <div *ngIf="whatToShow == 1" style="margin-top: 20px;">
+      <app-showproducts></app-showproducts>
+    </div>
+  
+    <!-- Cart Section -->
+    <div *ngIf="whatToShow == 2" style="margin-top: 20px;">
+      <app-cart></app-cart>
+    </div>
+  </div>
+  

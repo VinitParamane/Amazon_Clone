@@ -1,0 +1,41 @@
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background-color: #f5f5f5;">
+  <h1 style="margin-bottom: 20px; font-family: Arial, sans-serif; color: #333;">Amazon Clone</h1>
+  <div style="width: 300px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <h3 style="text-align: center; margin-bottom: 20px;">Login</h3>
+    <form>
+      <div style="margin-bottom: 15px;">
+        <label for="username" style="display: block; margin-bottom: 5px;">Username</label>
+        <input type="text" id="username" [(ngModel)]="username" name="username" 
+          style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
+      <div style="margin-bottom: 15px;">
+        <label for="password" style="display: block; margin-bottom: 5px;">Password</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" 
+          style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
+      <button type="button" (click)="login()" 
+        style="width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">
+        Login
+      </button>
+    </form>
+    <div style="margin-top: 20px; font-size: 14px; color: #555;">
+      <strong>Demo Accounts:</strong>
+      <div style="margin-top: 10px;">
+        Management Account: <br>
+        Username: <code>abc</code> <br>
+        Password: <code>123</code>
+      </div>
+      <div style="margin-top: 10px;">
+        Seller Account: <br>
+        Username: <code>xyz</code> <br>
+        Password: <code>123</code>
+      </div>
+      <div style="margin-top: 10px;">
+        Buyer Account: <br>
+        Username: <code>pqr</code> <br>
+        Password: <code>123</code>
+      </div>
+    </div>
+  </div>
+  <footer style="margin-top: 20px; font-size: 14px; color: #666;">Created by Vinit Paramane</footer>
+</div>

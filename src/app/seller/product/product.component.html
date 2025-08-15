@@ -1,0 +1,79 @@
+<div style="text-align: center; font-family: Arial, sans-serif; margin-top: 20px; color: #333;">
+    <!-- Table with Styling -->
+    <table style="width: 90%; margin: 0 auto; border-collapse: collapse; font-size: 14px; text-align: center;">
+      <thead>
+        <tr>
+          <th style="border: 2px solid #4CAF50; padding: 10px; background-color: #DFF2E1;">SR</th>
+          <th style="border: 2px solid #4CAF50; padding: 10px; background-color: #DFF2E1;">Product</th>
+          <th style="border: 2px solid #4CAF50; padding: 10px; background-color: #DFF2E1;">Price</th>
+          <th style="border: 2px solid #4CAF50; padding: 10px; background-color: #DFF2E1;">Description</th>
+          <th style="border: 2px solid #4CAF50; padding: 10px; background-color: #DFF2E1;">Discount</th>
+          <th style="border: 2px solid #4CAF50; padding: 10px; background-color: #DFF2E1;">Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pro of list; let i = index">
+          <td style="border: 2px solid #FF9800; padding: 10px;">{{i + 1}}</td>
+          <td style="border: 2px solid #FF9800; padding: 10px;">{{pro.prod}}</td>
+          <td style="border: 2px solid #FF9800; padding: 10px;">{{pro.price}}</td>
+          <td style="border: 2px solid #FF9800; padding: 10px;">{{pro.description}}</td>
+          <td style="border: 2px solid #FF9800; padding: 10px;">{{pro.discount}}</td>
+          <td style="border: 2px solid #FF9800; padding: 10px;">{{pro.cat}}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Add Product Form -->
+    <div style="margin-top: 20px; text-align: left; display: inline-block;">
+      <h3 style="text-align: center; margin-bottom: 20px;">Add Product</h3>
+      <label for="name">Name:</label>
+      <input 
+        id="name" 
+        type="text" 
+        [(ngModel)]="name" 
+        style="padding: 8px; border: 2px solid #4CAF50; border-radius: 4px; width: 250px; margin-bottom: 10px; display: block;"><br>
+  
+      <label for="price">Price:</label>
+      <input 
+        id="price" 
+        type="number" 
+        [(ngModel)]="price" 
+        style="padding: 8px; border: 2px solid #4CAF50; border-radius: 4px; width: 250px; margin-bottom: 10px; display: block;"><br>
+  
+      <label for="quantity">Quantity:</label>
+      <input 
+        id="quantity" 
+        type="number" 
+        [(ngModel)]="quantity" 
+        style="padding: 8px; border: 2px solid #4CAF50; border-radius: 4px; width: 250px; margin-bottom: 10px; display: block;"><br>
+  
+      <label for="description">Description:</label>
+      <input 
+        id="description" 
+        type="text" 
+        [(ngModel)]="description" 
+        style="padding: 8px; border: 2px solid #4CAF50; border-radius: 4px; width: 250px; margin-bottom: 10px; display: block;"><br>
+  
+      <label for="discount">Discount:</label>
+      <input 
+        id="discount" 
+        type="number" 
+        [(ngModel)]="discount" 
+        style="padding: 8px; border: 2px solid #4CAF50; border-radius: 4px; width: 250px; margin-bottom: 10px; display: block;"><br>
+  
+      <label for="category">Category:</label>
+      <select 
+        id="category" 
+        [(ngModel)]="category" 
+        style="padding: 8px; border: 2px solid #4CAF50; border-radius: 4px; width: 250px; margin-bottom: 20px; display: block;">
+        <option *ngFor="let cat of list1" [value]="cat.id">{{cat.name}}</option>
+      </select>
+  
+      <button 
+        (click)="AddCategory()" 
+        style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; font-size: 14px; cursor: pointer;">
+        Add
+      </button>
+    </div>
+  </div>
+  
